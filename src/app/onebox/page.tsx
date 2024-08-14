@@ -3,11 +3,11 @@
 import Onebox from "@/components/Onebox";
 
 import { cn } from "@/lib/utils";
-import { ChartNoAxesColumn, House, Inbox, Mail, Menu, Send, UserSearch } from "lucide-react";
+import { ChartNoAxesColumn, House, Inbox, Loader2, Mail, Menu, Send, UserSearch } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 type Props = {};
 
