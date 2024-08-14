@@ -9,9 +9,19 @@ export default function Home() {
 
   const router = useRouter();
 
-  const handleLogin = async() => {
+  const handleLogin = async () => {
 
-    await axios.get( `https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=${process.env.NEXT_CLIENT_URL}`);
+    try {
+
+      await axios.get(`https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=${process.env.NEXT_CLIENT_URL}`);
+      
+    } catch (error) {
+
+      console.log(error);
+      
+
+    }
+
   }
 
   return (
