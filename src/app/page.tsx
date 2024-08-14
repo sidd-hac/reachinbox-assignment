@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <main className="relative flex min-h-screen bg-black flex-col items-center justify-center">
+    <main className="relative flex min-h-screen bg-black flex-col ">
 
       <div className=" absolute top-0 flex  border-b border-slate-100" >
         <Image src="/logo.png" alt="logo" width={400} height={200} quality={100} />
