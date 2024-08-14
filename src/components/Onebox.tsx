@@ -45,7 +45,7 @@ const Onebox = (props: Props) => {
             <Separator />
 
             {isClickedHome && <EpmtyWorkspace/>}
-            {isClickedInbox && <Suspense><EmailWorkspace/></Suspense>}
+            {isClickedInbox && <EmailWorkspace/>}
 
         </div>
     )
