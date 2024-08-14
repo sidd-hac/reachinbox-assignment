@@ -6,6 +6,7 @@ import WorkspaceDropdown from "./WorkspaceDropdown"
 import { Separator } from "./ui/separator"
 import EpmtyWorkspace from "./EpmtyWorkspace"
 import EmailWorkspace from "./EmailWorkspace"
+import { Suspense } from "react"
 
 
 
@@ -44,7 +45,7 @@ const Onebox = (props: Props) => {
             <Separator />
 
             {isClickedHome && <EpmtyWorkspace/>}
-            {isClickedInbox && <EmailWorkspace/>}
+            {isClickedInbox && <Suspense><EmailWorkspace/></Suspense>}
 
         </div>
     )
