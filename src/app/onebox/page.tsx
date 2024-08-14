@@ -3,7 +3,7 @@
 import Onebox from "@/components/Onebox";
 
 import { cn } from "@/lib/utils";
-import { ChartNoAxesColumn, House, Inbox, Loader2, Mail, Menu, Send, UserSearch } from "lucide-react";
+import { ChartNoAxesColumn, House, Inbox, Mail, Menu, Send, UserSearch } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
@@ -42,7 +42,9 @@ const Sidebar = (props: Props) => {
 
 
     return (
-        <Suspense fallback={<div><Loader2 className="w-8 h-8 animate-spin" /></div>}>
+        <Suspense>
+
+
             <div className="flex min-h-screen">
                 <aside className={cn("border-r-2 border-gray-700 flex flex-col justify-between items-center w-20 min-h-screen",
                     { 'bg-gray-900': theme === 'dark' }
