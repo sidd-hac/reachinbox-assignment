@@ -1,6 +1,5 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import axios from "axios";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
@@ -9,19 +8,9 @@ export default function Home() {
 
   const router = useRouter();
 
-  const handleLogin = async () => {
+  const handleLogin = () => {
 
-    try {
-
-      await axios.get(`https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=${process.env.NEXT_CLIENT_URL}`);
-      
-    } catch (error) {
-
-      console.log(error);
-      
-
-    }
-
+    window.location.href = `https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=${process.env.NEXT_PUBLIC_CLIENT_URL}`;
   }
 
   return (
