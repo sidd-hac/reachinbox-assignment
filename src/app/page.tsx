@@ -10,7 +10,7 @@ export default function Home() {
 
   const handleLogin = () => {
 
-    window.location.href = `https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=${process.env.CLIENT_URL}`;
+    window.location.href = `https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=${process.env.NEXT_CLIENT_URL}`;
   }
 
   return (
